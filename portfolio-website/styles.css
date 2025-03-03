@@ -1,0 +1,252 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    width: 100%;
+    height:100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 350px;
+    height: 100vh;
+    background: #f9f9f9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 40px;
+    overflow-y: scroll; /* Enable scrolling */
+    -ms-overflow-style: none;  /* For Internet Explorer */
+    scrollbar-width: none;  /* For Firefox */
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit browsers like Chrome, Safari */
+}
+
+/* Logo */
+.logo.center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 260px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Main Navigation Menu */
+nav ul {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li {
+    margin: 5px 20px;
+}
+
+nav ul li a {
+    color: rgb(36, 36, 36);
+    text-decoration: none;
+    font-size: 12px;
+    transition: 0.3s;
+    font-family: Courier, monospace;
+}
+
+nav ul li a:hover {
+    color: #9ed46c;
+}
+
+nav ul li.no-hover a:hover {
+    color: rgb(36, 36, 36); /* Keep the default color */
+    text-decoration: none;
+}
+
+/* Main Content */
+.content {
+    background: #f9f9f9;
+    margin-left: 350px;
+    width: 100%;
+    padding: 40px;
+    overflow-y: auto;
+    border-left-color: rgb(50, 50, 50);
+    border-left-width: 1px;
+    border-left-style: solid;
+}
+
+/* Projects Type Menu */
+.project-type {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.project-type ul {
+    list-style: none;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-type ul li {
+    margin: 5px;
+}
+
+.project-type ul li a {
+    color: rgb(25, 25, 25);
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.project-type ul li a:hover,
+.project-type ul li a.active {
+    color: #9ed46c;
+}
+
+.project-type ul li.no-hover a:hover {
+    color: rgb(36, 36, 36); /* Keep the default color */
+    text-decoration: none;
+}
+
+/* Projects Menu */
+.projects-menu {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.projects-menu ul {
+    list-style: none;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-menu ul li {
+    padding-bottom: 5px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(50, 50, 50);
+    margin: 5px 0;
+}
+
+.projects-menu ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.projects-menu ul li a:hover {
+    color: #9ed46c;
+}
+
+.projects-menu ul li.no-hover a:hover {
+    color: rgb(36, 36, 36); /* Keep the default color */
+    text-decoration: none;
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 0px 0;
+}
+
+/* Individual Project */
+.project {
+    background: #f9f9f9;
+    padding: 0px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%; /* Ensure it takes up the full width */
+    margin: 0 auto; /* Keep it centered horizontally if there's any margin to adjust */
+    padding-bottom: 40px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 0px;
+}
+
+/* Logo Placement */
+.logo.center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 260px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    color: rgb(36, 36, 36);
+    font-weight: normal; /* Set font weight to normal */
+    text-decoration: none; /* Remove underline */
+    font-style:normal;
+    text-align: left;
+    font-size:16px;
+    margin-top: 10px;
+    font-family: Courier, monospace;
+}
+
+.project h3:hover {
+    color: #9ed46c;
+    font-weight: normal; /* Set font weight to normal */
+    text-decoration: none; /* Remove underline */
+    text-align: left;
+    font-size:16px;
+    margin-top: 10px;
+    font-family: Courier, monospace;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        position:absolute;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
+}
